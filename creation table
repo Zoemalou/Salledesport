@@ -1,0 +1,43 @@
+CREATE TABLE adherent (
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	prenom varchar(40) NOT NULL,
+	nom varchar(40) NOT NULL,
+	email varchar (255) NOT NULL,
+	numero char(8) UNIQUE NOT NULL,
+	dateInscription date NOT NULL,
+	dateExpiration date
+);
+
+CREATE TABLE coach (
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nomComplet varchar(100) NOT NULL,
+	email varchar (255) NOT NULL,
+	heureDebut time NOT NULL DEFAULT '8:00:00',
+	heureFin time NOT NULL DEFAULT '18:00:00',
+	numeroLicence char(16) NOT NULL
+);
+
+CREATE TABLE salle (
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nom varchar(100) NOT NULL,
+	capacite smallint NOT NULL,
+	equipement varchar(30) NOT NULL DEFAULT 'classique'
+);
+
+CREATE TABLE sceance (
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	heureDebut datetime NOT NULL,
+	heureFin datetime NOT NULL,
+	intitule varchar(30) NOT NULL,
+	idCoach int NOT NULL REFERENCES coach(id),
+	idSalle int NOT NULL REFERENCES salle(id),
+	CHECK (heureDebut < heureFin)
+);
+
+CREATE TABLE adherent_sceance (
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idSceance int NOT NULL REFERENCES sceance(id),
+	idAdherent int NOT NULL REFERENCES adherent(id),
+);
+
+
