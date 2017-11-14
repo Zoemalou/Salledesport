@@ -1,1 +1,48 @@
-Nouakchott
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+<header>
+	<h1>Votre salle de sport</h1>
+	<nav>
+		<ul>
+			<li><a href="index.php">accueil |</a></li>
+			<li><a href="presenstation.php">présentation |</a></li>
+			<li><a href="inscription.php">inscription |</a></li>
+			<li><a href="contact.php">contact  </a></li>
+			<li><form class="droite"><label for="connexion" id="connexion">connexion : </label><input method="post" type="password" name="connexion" action="connexion.php"></form></li>
+		</ul>
+	</nav>
+	<hr>
+</header>
+<main>
+	<img src="img/car.jpg" alt="course de voitures">
+	<img src="img/moto2.jpg" alt="course de mots">
+	<img src="img/moto.jpg" alt="autre course à motos">
+
+</main>
+
+<footer>
+
+<div>
+	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+	<i class="fa fa-pinterest-square" aria-hidden="true"></i>
+	<i class="fa fa-twitter-square" aria-hidden="true"></i>
+	<h5> </h5>
+</div>
+	<hr class="bas">
+
+	<p>Site fait par Eva, Clement, Joël et Emma</p>
+
+</footer>
+
+</body>
+</html>

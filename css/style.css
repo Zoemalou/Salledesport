@@ -1,0 +1,90 @@
+body{
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+h1{
+	font-family: 'Lobster', cursive;
+	color: white;
+	text-align: center;
+	font-size: 60px;
+}
+
+ul li{
+	margin-left: 50px;
+	display: inline-block;
+	font-style: none;
+	margin-top: 80px;
+	color: white;
+	text-decoration: none;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+.droite{
+
+	margin-left: 1320px;
+	margin-top: -100px;
+
+}
+
+hr{
+	width: 90%;
+	margin-top: -80px;
+}
+
+input{
+	background-color: black;
+	border-radius: 10px solid 1px white;
+}
+
+img{
+	width: 100%;
+	margin-top: 50px;
+	position: absolute;
+}
+
+main{
+transition: ;
+}
+
+footer{
+	margin-top: 1400px;
+	}
+
+.facebook{
+	width: 20% 
+	margin-left: 60px;
+}
+
+.instagram{
+	width: 20%; 
+	margin-left: 120px;
+	margin-bottom: 120px;
+}
+
+.twitter{
+	width: 20%; 
+	padding-left: 240px;
+}
+
+div{
+	margin-left: 90px;
+	display: inline;
+	margin-bottom: 120px;
+}
+
+p{
+	float: right;
+	margin-right: 85px;
+	margin-top: -60px; 
+}
+
+.bas{
+	margin-bottom: 80px;
+}
