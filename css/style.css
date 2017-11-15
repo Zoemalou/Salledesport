@@ -28,7 +28,7 @@ a{
 
 .droite{
 
-	margin-left: 1320px;
+	margin-left: 1250px;
 	margin-top: -100px;
 
 }
@@ -41,12 +41,14 @@ hr{
 input{
 	background-color: black;
 	border-radius: 10px solid 1px white;
+	color: white;
 }
 
 img{
-	width: 100%;
+	width: 80%;
 	margin-top: 50px;
 	position: absolute;
+	margin-left: 180px;
 }
 
 main{
@@ -54,7 +56,7 @@ transition: ;
 }
 
 footer{
-	margin-top: 1400px;
+	margin-top: 1050px;
 	}
 
 .facebook{
