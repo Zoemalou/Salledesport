@@ -1,5 +1,5 @@
 <?php 
-	$page = 'presentation';
+	$page = 'presenstation';
 	require_once('parts/header.php');
 ?>
 <p>Voici nos salles</p>
