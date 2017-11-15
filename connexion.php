@@ -49,13 +49,11 @@ if (!isset($_POST['selection'])): ?>
   }
   var_dump($requete);
   $sql = $connecteur->query($requete)->fetchAll(PDO::FETCH_ASSOC);
-  var_dump($sql);
-  echo ($_POST['mdp']);
-  break;
+  
 
   if ($sql['mdp'] == $_POST['mdp']) {
     header('Location: membre.php');
-     
+    exit(); 
   } else {
     header('Location: connexion.php');
   }
