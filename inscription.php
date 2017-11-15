@@ -15,7 +15,7 @@ if (!isset($_POST['nom'])):?>
 </head>
 <body>
   <header>
-    <img class="tigre" src="img/logo.jpg">
+    <img class="tigre" src="img/tigrelogo.jpg">
     <h1>Salut à toi, tu veux rejoindre la team? Inscris toi vite!</h1>
 
     <h2>Nos salles sont ouvertes de 6h30h à 23h le soir. Des coachs sont disponibles toute la journée non-stop.</h2>
