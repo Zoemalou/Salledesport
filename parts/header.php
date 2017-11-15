@@ -28,11 +28,7 @@
 			<li <?php if ($page == "contact") echo 'class="active"'; ?>><a href="contact.php">contact  </a></li>
 
 			<li>
-				<form class="droite" action="connexion.php" method="post">
-					<label for="connexion" id="connexion"><?php if (isset($_SESSION['prenom'])) echo 'Déconnexion'; else echo 'Connexion'; ?> 
-					</label>
-					<input type="password" name="connexion">
-				</form>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#connexion">Connexion</button>
 			</li>
 
 		</ul>
