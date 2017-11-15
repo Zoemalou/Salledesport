@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Header</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -15,7 +15,7 @@
 
 <header>
 	<img class="logo" src="img/Mylogo.png">
-	<?php echo $titre; ?><h1>Votre salle de sport, </h1><?php if(isset($_SESSION['prenom'])): ?>
+	<h1>Votre salle de sport, </h1><?php if(isset($_SESSION['prenom'])): ?>
 <?php endif; ?>
 	<nav>
 		<ul>
@@ -37,7 +37,7 @@
 
 		</ul>
 	</nav>
-	<?php echo $trait; ?><hr>
+<hr>
 </header>
 
 <main>

@@ -6,10 +6,9 @@ body{
 }
 
 .logo{
-	width: 7%;
-	margin-top: 70px;
-	margin-left: 450px;
-	z-index: 4;
+	width: 6%;
+	margin-top: 10px;
+	margin-left: 540px;
 }
 
 h1{
@@ -17,6 +16,7 @@ h1{
 	color: white;
 	text-align: center;
 	font-size: 60px;
+	margin-top: 30px;
 }
 
 ul li{
@@ -94,52 +94,30 @@ p{
 	margin-bottom: 80px;
 }
 
-@keyframes AutoSlide {
-	from {
-		left: -800px; 
-	}
-
-	20% {
-		left: -700px;
-	}
-	
-	40% {
-		left: -600px;
-	}
-	
-	60% {
-		left: -500px; 
-	}
-
-	80% {
-		left: -400px; 
-	}
-	to {
-		left: 0px;
-	}
+header h1{
+    text-align: center;
 }
 
-#slideshow {
-	position: absolute;
-	width: 700px;
-	overflow: hidden;
+/* css d'Eva pour inscription*/
+.tigre{
+
+   display:inline-block;
+    float:right;
+    padding: 0;
+    margin: 0;
 }
 
-#sContent {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	animation-name: AutoSlide;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
+header h2{
+    font-size: 1em;
 }
 
-#sContent li {
-	display: inline;
+.coach{
+
+    display:block;
+    width:150px;
+    height: 150px;
 }
 
-img{
-	width: 1200px;
-	margin-top: 80px;
-}
+
+
+
