@@ -5,6 +5,13 @@ body{
 	color: white;
 }
 
+.logo{
+	width: 7%;
+	margin-top: 70px;
+	margin-left: 450px;
+	z-index: 4;
+}
+
 h1{
 	font-family: 'Lobster', cursive;
 	color: white;
@@ -51,10 +58,6 @@ img{
 	margin-left: 180px;
 }
 
-main{
-transition: ;
-}
-
 footer{
 	margin-top: 1050px;
 	}
@@ -89,4 +92,54 @@ p{
 
 .bas{
 	margin-bottom: 80px;
+}
+
+@keyframes AutoSlide {
+	from {
+		left: -800px; 
+	}
+
+	20% {
+		left: -700px;
+	}
+	
+	40% {
+		left: -600px;
+	}
+	
+	60% {
+		left: -500px; 
+	}
+
+	80% {
+		left: -400px; 
+	}
+	to {
+		left: 0px;
+	}
+}
+
+#slideshow {
+	position: absolute;
+	width: 700px;
+	overflow: hidden;
+}
+
+#sContent {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	animation-name: AutoSlide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+#sContent li {
+	display: inline;
+}
+
+img{
+	width: 1200px;
+	margin-top: 80px;
 }
