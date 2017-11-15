@@ -1,7 +1,7 @@
 <?php session_start();
 
-if (!isset($_POST['selection'])) {
-echo '
+if (!isset($_POST['selection'])): ?> 
+
 <div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="connexion">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -10,7 +10,7 @@ echo '
         <h4 class="modal-title" id="exampleModalLabel">Connexion</h4>
       </div>
       <div class="modal-body">
-        <form method="post" action="">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
           <div class="form-group">
             <label for="Email" class="control-label">Email : </label>
             <input type="email" name="Email" class="form-control" id="Email" placeholder="Email" required>
@@ -29,26 +29,35 @@ echo '
           </div>          
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <input type="submit" name="submit" value="Envoyer" class="btn btn-primary">
           </div>
         </form>
       </div>
     </div>
   </div>
-</div> '; } else {
+</div> 
 
-
-
+<?php else :
 
   include('connexionbdd.php');
-  $table = $_POST['selection'];
   $nom = $_POST['Email'];
-  $sql = $connecteur->query('SELECT mdp FROM $table WHERE \'email\' = $nom ;');
-
-  if ($sql == $_POST['mdp']) {
-    header('Location: membre.php?email=$_POST[\'email\']');
+  
+  if ($_POST['selection'] == 'coach') {
+    $requete = "SELECT mdp FROM coach WHERE email = '" .$nom. "'";
   } else {
-    header('Location: connexion.php'); 
+    $requete = "SELECT mdp FROM adherent WHERE email = '" .$nom. "'";    
   }
-}
+  var_dump($requete);
+  $sql = $connecteur->query($requete)->fetchAll(PDO::FETCH_ASSOC);
+  var_dump($sql);
+  echo ($_POST['mdp']);
+  break;
+
+  if ($sql['mdp'] == $_POST['mdp']) {
+    header('Location: membre.php');
+     
+  } else {
+    header('Location: connexion.php');
+  }
+endif;
 ?>
