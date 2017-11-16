@@ -28,11 +28,12 @@
 			<li <?php if ($page == "contact") echo 'class="active"'; ?>><a href="contact.php">contact  </a></li>
 
 			<li>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#connexion"><a href="connexion.php">Connexion</a></button>
+				<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#connexion">Connexion</button>
 			</li>
 
 		</ul>
 	</nav>
+	
 <hr>
 </header>
 
