@@ -7,6 +7,7 @@ body{
 
 .logo{
 	width: 6%;
+	float: left;
 	margin-top: 10px;
 	margin-left: 540px;
 }
@@ -34,10 +35,8 @@ a{
 }
 
 .droite{
-
 	margin-left: 1250px;
 	margin-top: -100px;
-
 }
 
 hr{
@@ -45,11 +44,7 @@ hr{
 	margin-top: -80px;
 }
 
-input{
-	background-color: black;
-	border-radius: 10px solid 1px white;
-	color: white;
-}
+
 
 img{
 	width: 80%;
@@ -60,7 +55,7 @@ img{
 
 footer{
 	margin-top: 1050px;
-	}
+}
 
 .facebook{
 	width: 20% 
@@ -78,10 +73,17 @@ footer{
 	padding-left: 240px;
 }
 
+.carousel-indicators{
+	margin-top: 1000px
+}
+
+.item active{
+	margin-top: 10px;
+}
+
 div{
 	margin-left: 90px;
 	display: inline;
-	margin-bottom: 120px;
 }
 
 p{
@@ -98,14 +100,7 @@ header h1{
     text-align: center;
 }
 
-/* css d'Eva pour inscription*/
-.tigre{
-
-   display:inline-block;
-    float:right;
-    padding: 0;
-    margin: 0;
-}
+/* css d'Eva pour inscription */
 
 header h2{
     font-size: 1em;
@@ -117,6 +112,7 @@ header h2{
     width:150px;
     height: 150px;
 }
+
 
 /*css pour presenstation*/
 div #pres {
@@ -130,4 +126,34 @@ div #pres {
 	display: inline-block;
 	margin-top: 0;
 	position: relative;
+}
+
+fieldset{
+	margin-top: 70px;
+	margin-left: 90px;
+}
+
+legend{
+	color: white;
+	text-decoration: none;
+}
+
+.deux{
+	display: inline-block;
+}
+
+.trait{
+	position: absolute;
+	width: 1700px;
+	margin-top: 22px;
+}
+
+
+input{
+	background-color: black;
+	width: 250px;
+	height: 25px;
+	border-radius: solid 1px white;
+	color: white;
+	border: 50px;
 }

@@ -1,87 +1,71 @@
 <?php
-if (!isset($_POST['nom'])):?>
+$page = 'inscription';
+require_once('parts/header.php');
+?>
 
 
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Pages d'insciprion</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-</head>
-<body>
-  <header>
-    <img class="tigre" src="img/tigrelogo.jpg">
-    <h1>Salut à toi, tu veux rejoindre la team? Inscris toi vite!</h1>
-
-    <h2>Nos salles sont ouvertes de 6h30h à 23h le soir. Des coachs sont disponibles toute la journée non-stop.</h2>
-  </header>
 
 <form method="post" action="">
- 
-   <fieldset>
+      <p>
+   
+   <fieldset class="col-xs-2">
        <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+      <hr class="trait">
+       <label for="nom">Nom :</label>
+       <input type="text" placeholder="Martin" name="nom" id="nom" autofocus />
+       <hr class="trait">
 
-       <label for="nom">NOM ?</label>
-       <input type="text" name="nom" id="nom" />
-
-       <label for="prenom">PRENOM ?</label>
-       <input type="text" name="prenom" id="prenom" />
+       <label for="prenom">Prénom :</label>
+       <input type="text" placeholder="Marie" name="prenom" id="prenom" autofocus />
+       <hr class="trait">
  
-       <label for="email">EMAIL ?</label>
-       <input type="email" name="email" id="email" />
+       <label for="email">EmailL :</label>
+       <input type="email" autocomplete="off" placeholder="marie@orange.com" name="email" id="email" autofocus />
+       <hr class="trait">
        
-       <label for="pass"> MOT DE PASSE :</label>
-       <input type="password" name="pass" id="pass" />
+       <label for="pass">Mot de passe :</label>
+       <input type="password" autocomplete="off" placeholder="à retenir" name="pass" id="pass" autofocus />
+  </fieldset>
        
-   </p>
   
-       <legend>Choix du coach (obligatoire pour la première séance)</legend> <!-- Titre du fieldset -->
+  <fieldset class="deux">
+       <h2>Choix du coach (obligatoire pour la première séance)</h2> 
 
   <div class="row">
-      <p> Sélectionnez le coach que vous souhaitez avoir (peut changer au cours de entrainement et suivant le niveau) :
+     
+      <h4>Sélectionnez le coach que vous souhaitez avoir (peut changer au cours de entrainement et suivant le niveau) :</h4>
+  
 
-        <div class="col s3">
+  <container class="phototexte">
+        <div class="col-xs-2">
           <img class="coach" src="img/harold.jpg" alt="harold">
           <input type="radio" name="coach" value="harold" id="harold" /> <label for="harold">Harol</label>
         </div>
          
-        <div class="col s3">   
+        <div class="col-xs-2">   
           <img class="coach" src="img/tina.jpg" alt="tina">
           <input type="radio" name="coach" value="tina" id="tina" /> <label for="tina">Tina</label>
         </div>
            
-        <div class="col s3">    
+        <div class="col-xs-2">    
            <img class="coach" src="img/leo.jpg" alt="leo">
            <input type="radio" name="coach" value="leo" id="leo" /> <label for="leo">Léo</label>
         </div>
 
-        <div class="col s3">   
+        <div class="col-xs-2">   
            <img class="coach" src="img/louna.jpg" alt="louna">
            <input type="radio" name="coach" value="louna" id="louna" /> <label for="louna">Louna</label>
         </div>
+  </container>
 
-       </p>
- </div>
+  </div>
+  </fieldset>
+
         <p><input type="submit" value="M'inscrire" /></p>
 
-   </fieldset>
+  
 </form>
 
+<?php require_once('parts/footer.php'); ?>
 
-          
-</body>
-</html>
 
-<?php 
-  else:
-    $nom=$_POST['nom'];$prenom=$_POST['prenom'];$email=$_POST['email'];$pass=$_POST['pass'];
-    $connecteur = new PDO('mysql:host=localhost;dbname=salle_de_sport','salledesport','hopeforce3');
-$requete = "INSERT INTO adherent (nom,prenom,email,mdp) VALUES ('".$nom.",".$prenom.",".$email.",".$pass."'";
-$georges = $connecteur->exec($requete)->fetchAll(PDO::FETCH_ASSOC);
-var_dump($adherents);
-endif;?>

@@ -44,7 +44,7 @@
 </div>
 	<hr class="bas">
 
-	<p>Site fait par Eva, Clement, Joël et Emma</p>
+	<p>Site fait par Eva, Clément, Joël et Emma</p>
 
 </footer>
 
