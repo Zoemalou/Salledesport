@@ -2,7 +2,7 @@
 	$page = 'presenstation';
 	require_once('parts/header.php');
 ?>
-<div class="row">
+<div class="row" id="pres">
 	<?php 
 		require_once('salles.php');
 		foreach ($salles as $salle) {

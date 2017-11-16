@@ -118,6 +118,16 @@ header h2{
     height: 150px;
 }
 
+/*css pour presenstation*/
+div #pres {
+	display: inline-block;
+	margin-top: 0;
+	position: relative;
+}
 
-
-
+#imgpres{
+	width: 30%;
+	display: inline-block;
+	margin-top: 0;
+	position: relative;
+}
