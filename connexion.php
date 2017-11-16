@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+require_once('parts/header.php');
 
 if (!isset($_POST['selection'])): ?> 
 
@@ -58,4 +59,6 @@ if (!isset($_POST['selection'])): ?>
     header('Location: connexion.php');
   }
 endif;
+
+require_once('parts/footer.php');
 ?>
